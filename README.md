@@ -30,21 +30,15 @@ No se utilizó ninguna librería externa para mantener el código lo más puro p
 4. Para una mejor experiencia de prueba, usar herramientas de desarrollador (`Ctrl+Shift+I`) y probar el diseño en distintos tamaños de pantalla.
 
 ## 📂 Estructura del Proyecto
-/assets
-   /img1.jpg
-   /img2.jpg
-   /img3.jpg
-   /img4.jpg
-   
-index.html
-
-styles.css
-
-script.js
-
-robots.txt
-
-sitemap.xml
-
-README.md
+-/assets
+   -/img1.jpg
+   -/img2.jpg
+   -/img3.jpg
+   -/img4.jpg 
+-index.html
+-styles.css
+-script.js
+-robots.txt
+-sitemap.xml
+-README.md
 
