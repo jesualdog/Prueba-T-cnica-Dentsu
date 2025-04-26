@@ -1,0 +1,450 @@
+:root {
+    --primary-color: #6A0066;
+    --secondary-color: #f3e5f5;
+    --text-color: black;
+    --background-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #424242;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 48px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--background-color);
+    padding: 80px 2rem 2rem;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateY(0);
+}
+
+.mobile-menu a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.mobile-menu a:hover,
+.mobile-menu a.active {
+    color: var(--primary-color);
+}
+
+.mobile-menu .cta-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.cta-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.cta-btn:hover {
+    background-color: #6A0066;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 8rem 5% 4rem;
+    gap: 4rem;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    line-height: 40px;
+    color: #000;
+}
+
+.hero p {
+    margin-bottom: 2.5rem;
+    color: #000;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.primary-btn,
+.secondary-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid var(--primary-color);
+}
+
+.primary-btn:hover {
+    background-color: #6A0066;
+    transform: translateY(-2px);
+}
+
+.secondary-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+}
+
+.our-work {
+    padding: 3rem 5%;
+    background-color: white;
+}
+
+.our-work h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.car-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.car-card {
+    background-color: var(--background-color);
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+}
+
+.card-image {
+    position: relative;
+    flex: 1;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.car-info h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem;
+    color: #000;
+}
+
+.car-info p {
+    color: #000;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+.tags {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    background-color: #E1E1E1;
+    color: #000;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.card-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Inicio seccion de Iconos*/
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px;
+  }
+  
+  .social-icons .icon {
+    font-size: 2rem;
+    color: #D9D9D9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons .icon:hover {
+    color: #6A0066;
+  }
+
+/* Responsividad para dispositivos móviles (<768px) */
+@media (max-width: 768px) {
+    .nav-links, 
+    .desktop-only {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+        min-height: auto;
+    }
+    .hero-image {
+        width: 100%;
+        order: -1;
+    }
+
+    .hero-content {
+        width: 95%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .our-work {
+        padding: 4rem 5%;
+    }
+
+    .our-work h2 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .car-card {
+        flex-direction: column;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+        order: -1;
+    }
+
+    .card-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn .secondary-btn {   
+        width: 40%;
+        height: auto;
+    }
+
+    .social-icons .icon {
+        flex: 0 0 auto;
+      }
+
+      .social-icons .icon {
+        flex: 0 0 22%;
+        text-align: center;
+      }
+
+    .car-card {
+        flex-direction: column; 
+        gap: 1.5rem;
+    }
+
+    .card-image img {
+        max-width: 100%;
+        height: auto;
+        order: -1;
+    }
+
+    .car-info {
+        text-align: center;
+    }
+
+    .car-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .car-info p {
+        font-size: 1rem;
+    }
+
+    .tags {
+        justify-content: center;
+    }
+
+    .tags span {
+        margin: 5px;
+    }
+}
+
