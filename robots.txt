@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://tuusuario.github.io/tu-repositorio/sitemap.xml
+
+Sitemap: https://jesualdog.github.io/Prueba-Tecnica-Dentsu/sitemap.xml
+
