@@ -35,10 +35,16 @@ No se utilizó ninguna librería externa para mantener el código lo más puro p
    /img2.jpg
    /img3.jpg
    /img4.jpg
+   
 index.html
+
 styles.css
+
 script.js
+
 robots.txt
+
 sitemap.xml
+
 README.md
 
